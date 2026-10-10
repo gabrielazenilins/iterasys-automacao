@@ -1,0 +1,18 @@
+{
+  "name": "iterasys-automacao",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automação de casos de teste e critérios de aceitação - plataforma Iterasys",
+  "scripts": {
+    "test": "playwright test --project=chromium",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:all": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "dotenv": "^16.4.5"
+  }
+}
