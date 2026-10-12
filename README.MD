@@ -65,6 +65,7 @@ Se a senha tiver `#` ou espaço, coloque o valor entre aspas duplas.
 | `npm run test:firefox` | Firefox |
 | `npm run test:webkit` | WebKit |
 | `npm run test:all` | Os três navegadores em sequência |
+| `npm run test:all:headed` | Os três navegadores em sequência, com a janela visível |
 | `npm run test:ui` | Modo interativo do Playwright |
 
 Relatório do último teste: `npx playwright show-report`.
@@ -80,4 +81,5 @@ Sem `USER_EMAIL` e `USER_PASSWORD`, os testes de login são ignorados e os demai
 - **Nada é alterado no site.** O link de recuperação usa um token inventado, então nenhuma senha é trocada. O teste de cadastro apenas clica em "Cadastrar-se" e confere o aviso; nenhuma conta é criada.
 - **API observada pelo navegador.** Os testes capturam a resposta da chamada que a própria página faz, em vez de chamar a API diretamente. Assim cookies e token anti-CSRF ficam por conta do navegador, sem tratar nada sensível no código.
 - **Limite no login válido.** Após o login bem-sucedido o navegador navega para `/start` na hora e descarta o corpo da resposta; por isso o CT_001 confere o status da API e comprova o sucesso pela tela.
-- **Clique no botão OK da redefinição.** O painel de regras da senha fica por cima do botão e intercepta o clique do mouse; o clique é disparado direto no elemento.
+- **Clique no botão OK da redefinição.** O painel de regras da senha fica por cima do botão e intercepta o clique do mouse; o clique é disparado direto no elemento. Para um usuário real, isso pode ser um problema de usabilidade (a confirmar em diferentes tamanhos de tela).
+- **Falha esperada no CA_002 (tela).** O teste está marcado com `test.fail()` por causa do defeito descrito em "Achados". Na lista de resultados ele aparece com ✘ em cada navegador, mas conta como aprovado. Quando o defeito for corrigido, o teste passa a falhar e a marcação deve ser removida.
