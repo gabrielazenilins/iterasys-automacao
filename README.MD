@@ -65,7 +65,6 @@ Se a senha tiver `#` ou espaço, coloque o valor entre aspas duplas.
 | `npm run test:firefox` | Firefox |
 | `npm run test:webkit` | WebKit |
 | `npm run test:all` | Os três navegadores em sequência |
-| `npm run test:all:headed` | Os três navegadores em sequência, com a janela visível |
 | `npm run test:ui` | Modo interativo do Playwright |
 
 Relatório do último teste: `npx playwright show-report`.

@@ -8,7 +8,7 @@
     "test:headed": "playwright test --headed --project=chromium",
     "test:firefox": "playwright test --project=firefox",
     "test:webkit": "playwright test --project=webkit",
-    "test:all:headed": "playwright test --headed",
+    "test:all": "playwright test ",
     "test:ui": "playwright test --ui"
   },
   "devDependencies": {
