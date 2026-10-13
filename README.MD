@@ -70,7 +70,7 @@ Se a senha tiver `#` ou espaço, coloque o valor entre aspas duplas.
 Relatório do último teste: `npx playwright show-report`.
 
 Sem `USER_EMAIL` e `USER_PASSWORD`, os testes de login são ignorados e os demais continuam rodando.
-
+[Link da gravação](https://jam.dev/c/44a2d1a9-0561-40b3-9d4e-74638e525f2b)
 ## Decisões de projeto
 
 - **Page Objects.** Seletores e ações ficam em `pages/`; os specs só descrevem o cenário e as verificações.
